@@ -3,8 +3,8 @@
  * Author: Piyush Itankar <piyush@inpyjama.com>
  */
 
-int uninit_global; // This will go to .bss section
-int init_global = 10; // This will go to .data section
+extern int uninit_global; // This will go to .bss section
+extern int init_global; // This will go to .data section
 
 int foo(int label){ //This will go to .text section
     return label + uninit_global + init_global;
